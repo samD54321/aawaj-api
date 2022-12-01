@@ -1,5 +1,5 @@
 # aawaj-api
-
+You will need a CUDA capable device with proper drivers for CUDA and CUDNN installed to run this API with Tensorflow.v1 and PyTorch 1
 1. Create a conda environment with python 3.7 as: <br/>
 	```conda create -n myenv python=3.7```
 
