@@ -12,8 +12,6 @@ You will need a CUDA capable device with proper drivers for CUDA and CUDNN insta
 
 4. Install pip dependencies from requirements.txt as: <br/> 
 	```pip install -r requirements.txt```
-	(For Windows users) Windows users should additionally install protobuf with the command: </br>
-	```pip install protobuf==3.20.*```
 
 5. Within aawaj-api, run the following git commands: <br/>
 	```git clone -q --recursive https://github.com/NVIDIA/tacotron2.git``` <br/>
