@@ -7,9 +7,15 @@
 
 3. Install pip dependenvies from requirements.txt as: <br/> 
 	pip install -r requirements.txt
+
+4. Within aawaj-api, run the following git commands: <br/>
+	git clone -q --recursive https://github.com/NVIDIA/tacotron2.git
+	cd tacotron2/waveglow
+	git checkout 2fd4e63
+		
 	
-4. Run fileapi.py to create an API within your local host visible within your LAN by: <br/>
+5. Run fileapi.py to create an API within your local host visible within your LAN by: <br/>
 	python fileapi.py
 
-5. Run a query to access TTS functionalities as: <br/>
+6. Run a query to access TTS functionalities as: <br/>
 	localhost:5000/api?query=YOUR_QUERY_HERE
