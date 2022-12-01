@@ -10,8 +10,10 @@ You will need a CUDA capable device with proper drivers for CUDA and CUDNN insta
 3. Install Pytorch 1 within 'myenv'.
 	PyTorch official site : https://pytorch.org/get-started/locally/
 
-4. Install pip dependenvies from requirements.txt as: <br/> 
+4. Install pip dependencies from requirements.txt as: <br/> 
 	```pip install -r requirements.txt```
+	(For Windows users) Windows users should additionally intall protobuf with the command: </br>
+	```pip install protobuf==3.20.*```
 
 5. Within aawaj-api, run the following git commands: <br/>
 	```git clone -q --recursive https://github.com/NVIDIA/tacotron2.git``` <br/>
