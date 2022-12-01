@@ -8,6 +8,7 @@ You will need a CUDA capable device with proper drivers for CUDA and CUDNN insta
 	```conda create -n myenv python=3.7```
 
 3. Install Pytorch 1 within 'myenv'.
+	PyTorch official site : https://pytorch.org/get-started/locally/
 
 4. Install pip dependenvies from requirements.txt as: <br/> 
 	```pip install -r requirements.txt```
