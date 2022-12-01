@@ -12,10 +12,15 @@
 	```git clone -q --recursive https://github.com/NVIDIA/tacotron2.git``` <br/>
 	```cd tacotron2/waveglow``` <br/>
 	```git checkout 2fd4e63``` <br/>
-		
+
+5. Download the Aawaj model and WaveGlow model from the links given below:
+	```https://drive.google.com/file/d/1OyUBTPRYqit7Lv1AapMPSPEOiFwukxoN/view?usp=sharing```
+	```https://drive.google.com/file/d/1bVC8XbtPbTyrSgbqddJo6G8zgyZFMmXw/view?usp=sharing```
 	
-5. Run fileapi.py to create an API within your local host visible within your LAN by: <br/>
+6. Change your model paths within fileapi.py 
+
+7. Run fileapi.py to create an API within your local host visible within your LAN by: <br/>
 	```python fileapi.py```
 
-6. Run a query to access TTS functionalities as: <br/>
+8. Run a query to access TTS functionalities as: <br/>
 	```localhost:5000/api?query=YOUR_QUERY_HERE```
