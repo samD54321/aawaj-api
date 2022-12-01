@@ -22,7 +22,7 @@ from waveglow.denoiser import Denoiser
 
 force_download_TT2 = True
 #add the path to your Aawaj model and waveglow vocoder model
-tacotron2_pretrained_model = '/home/sampanna/Desktop/MAJOR/assets/Aawaj'#@param {type:"string"}
+tacotron2_pretrained_model = 
 waveglow_pretrained_model = '/home/sampanna/Desktop/MAJOR/assets/waveglow_256channels_ljs_v3.pt'#@param {type:"string"}
 
 
@@ -52,13 +52,13 @@ def ARPA(text):
 
 #torch.set_grad_enabled(False)
 
-# initialize Tacotron2 with the pretrained model
+
 hparams = create_hparams()
 
-#@title Parameters
-# Load Tacotron2 (run this cell every time you change the model)
-hparams.sampling_rate = 22050 # Don't change this
-hparams.max_decoder_steps = 1000 # How long the audio will be before it cuts off (1000 is about 11 seconds)
+
+# Loading Tacotron2 
+hparams.sampling_rate = 22050 
+hparams.max_decoder_steps = 1000 # How long the audio will be before it cuts off (1000 = 11 seconds)
 hparams.gate_threshold = 0.1 # Model must be 90% sure the clip is over before ending generation (the higher this number is, the more likely that the AI will keep generating until it reaches the Max Decoder Steps)
 model = Tacotron2(hparams)
 model.load_state_dict(torch.load(tacotron2_pretrained_model)['state_dict'])
@@ -93,7 +93,6 @@ def synthesize(text):
 
             audio = waveglow.infer(mel_outputs_postnet, sigma=sigma); 
             print(""); 
-            # ipd.display(ipd.Audio(audio[0].data.cpu().numpy(), rate=hparams.sampling_rate))
             sf.write("speech.wav", np.float32(audio[0].data.cpu().numpy()), 22050)
 
     return  join(os.getcwd(), "speech.wav")
