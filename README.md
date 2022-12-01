@@ -18,6 +18,8 @@
 	```https://drive.google.com/file/d/1bVC8XbtPbTyrSgbqddJo6G8zgyZFMmXw/view?usp=sharing```
 	
 6. Change your model paths within fileapi.py 
+	``` tacotron2_pretrained_model= PATH_TO_AAWAJ```
+	``` waveglow_pretrained_model=PATH_TO_WAVEGLOW```
 
 7. Run fileapi.py to create an API within your local host visible within your LAN by: <br/>
 	```python fileapi.py```
