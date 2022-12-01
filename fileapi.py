@@ -22,7 +22,7 @@ from waveglow.denoiser import Denoiser
 
 force_download_TT2 = True
 #add the path to your Aawaj model and waveglow vocoder model
-tacotron2_pretrained_model = 
+tacotron2_pretrained_model = '/home/sampanna/Desktop/MAJOR/assets/Aawaj'
 waveglow_pretrained_model = '/home/sampanna/Desktop/MAJOR/assets/waveglow_256channels_ljs_v3.pt'#@param {type:"string"}
 
 
