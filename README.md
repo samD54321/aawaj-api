@@ -9,9 +9,9 @@
 	pip install -r requirements.txt
 
 4. Within aawaj-api, run the following git commands: <br/>
-	git clone -q --recursive https://github.com/NVIDIA/tacotron2.git
-	cd tacotron2/waveglow
-	git checkout 2fd4e63
+	git clone -q --recursive https://github.com/NVIDIA/tacotron2.git <br/>
+	cd tacotron2/waveglow <br/>
+	git checkout 2fd4e63 <br/>
 		
 	
 5. Run fileapi.py to create an API within your local host visible within your LAN by: <br/>
