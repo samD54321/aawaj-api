@@ -7,9 +7,10 @@ You will need a CUDA capable device with proper drivers for CUDA and CUDNN insta
 2. Create a conda environment with python 3.7 as: <br/>
 	```conda create -n myenv python=3.7```
 
-3. Install Pytorch 1 within 'myenv'.
+3. Install Pytorch 1 within 'myenv'. <br/>
+	PyTorch official site : https://pytorch.org/get-started/locally/ (remember to install according to your CUDA compute environment version) 
 
-4. Install pip dependenvies from requirements.txt as: <br/> 
+4. Install pip dependencies from requirements.txt as: <br/> 
 	```pip install -r requirements.txt```
 
 5. Within aawaj-api, run the following git commands: <br/>

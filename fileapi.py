@@ -8,8 +8,8 @@ import torch
 
 import sys
 
-sys.path.append('tacotron2')
-sys.path.append('tacotron2/waveglow')
+sys.path.append('/home/sampanna/Desktop/MAJOR/aawaj-api/tacotron2')
+sys.path.append('/home/sampanna/Desktop/MAJOR/aawaj-api/tacotron2/waveglow')
 
 from hparams import create_hparams
 from model import Tacotron2
@@ -21,16 +21,16 @@ from waveglow.denoiser import Denoiser
 
 
 force_download_TT2 = True
-#add the path to your Aawaj model and waveglow vocoder model
+#add the path to your Aawaj model and waveglow vocoder model and merged dict
 tacotron2_pretrained_model = '/home/sampanna/Desktop/MAJOR/assets/Aawaj'
 waveglow_pretrained_model = '/home/sampanna/Desktop/MAJOR/assets/waveglow_256channels_ljs_v3.pt'
-
+merged_dict = '/home/sampanna/Desktop/MAJOR/assets/merged.dict.txt';
 
 
 
 
 thisdict = {}
-for line in reversed((open('merged.dict.txt', "r").read()).splitlines()):
+for line in reversed((open(merged_dict, "r").read()).splitlines()):
     thisdict[(line.split(" ",1))[0]] = (line.split(" ",1))[1].strip()
 def ARPA(text):
     out = ''
@@ -103,8 +103,6 @@ app = Flask(__name__)
 def returnAudio():
     d = {}
     inputchr = str(request.args['query'])
-    if(inputchr[0]==" "):
-        inputchr= inputchr[1:]
     path = synthesize(inputchr)
     d['output'] = path
     return Response(open(path, 'rb'), mimetype='audio/wav',)
