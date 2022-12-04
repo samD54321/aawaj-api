@@ -105,7 +105,7 @@ def returnAudio():
     inputchr = str(request.args['query'])
     path = synthesize(inputchr)
     d['output'] = path
-    return Response(open(path, 'rb'), mimetype='audio/wav',)
+    return Response(open(path, 'rb'), mimetype='audio/mp3',)
 
 
 
