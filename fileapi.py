@@ -101,10 +101,8 @@ app = Flask(__name__)
 
 @app.route('/api', methods = ['GET'])
 def returnAudio():
-    d = {}
     inputchr = str(request.args['query'])
     path = synthesize(inputchr)
-    d['output'] = path
     return Response(open(path, 'rb'), mimetype='audio/mp3',)
 
 
